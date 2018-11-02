@@ -18,7 +18,6 @@ public class Author {
     private Set<Book> books = new HashSet<>();
 
     // == CONSTRUCTORS ==
-
     public Author() {
     }
 

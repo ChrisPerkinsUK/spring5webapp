@@ -22,7 +22,6 @@ public class Book {
 
 
     // == CONSTRUCTORS ==
-
     public Book() {
     }
 
