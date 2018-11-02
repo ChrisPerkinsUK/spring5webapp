@@ -73,8 +73,23 @@ public class Author {
         return id != null ? id.equals(author.id) : author.id == null;
     }
 
+    /**
+     * Use the id property to establish uniqueness of an Author Object.
+     *
+     * @return
+     */
     @Override
     public int hashCode() {
         return id != null ? id.hashCode() : 0;
+    }
+
+    @Override
+    public String toString() {
+        return "Author{" +
+                "id=" + id +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", books=" + books +
+                '}';
     }
 }
