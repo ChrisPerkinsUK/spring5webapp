@@ -54,4 +54,27 @@ public class Author {
     public void setBooks(Set<Book> books) {
         this.books = books;
     }
+
+    // == OBJECT COMPARISON METHODS ==
+
+    /**
+     * Use the id property to establish uniqueness of an Author Object
+     *
+     * @param o
+     * @return
+     */
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Author author = (Author) o;
+
+        return id != null ? id.equals(author.id) : author.id == null;
+    }
+
+    @Override
+    public int hashCode() {
+        return id != null ? id.hashCode() : 0;
+    }
 }
